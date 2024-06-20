@@ -30,7 +30,7 @@ width = [2,10,1]
 
 , grid=3 : 20 step, grid = [5,10,20,50,100] : 50 step each
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.002.jpeg)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 002](https://github.com/seigun0629/AI/assets/55828996/150d989a-d067-404f-b341-77b417038bdf)
 
 위 문 제 에 서 , grid inteval을 늘 려 서 20으 로 훈 련 할 때 부 터 , 즉 spline function이 더 부드럽게 그려질 수 있을때 훈련로스, 테스트로스 모두 악화되는것을 알 수 있다. 이것이 많은 step수로 인한 과적화의 문제인지  spline function 자체가 과적화 되는것인지는 알 수 없다. 그러므로 step을 줄이고 grid interval은 유지해서 다시 실험해본다. 
 
@@ -38,7 +38,7 @@ width = [2,10,1]
 
 ,  grid=3 : 20 step, grid = [5,10,20,50,100] : 30 step each
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.003.jpeg)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 003](https://github.com/seigun0629/AI/assets/55828996/d7002c4c-705f-48f9-a82a-51bb709b1b27)
 
 30 step으로 줄일때, loss 는 더욱 커지고 마지막 훈련까지 적절히 로스를 줄이지 못함을 알 수 있다. 이는 step이 부족함을 의미한다고 볼 수 있다. 그럼 step을 50으로 유지후 grid를 줄여본다. 
 
@@ -46,8 +46,7 @@ width = [2,10,1]
 
 ,  grid=3 : 20 step, grid = [5,10,15,20,25] : 50 step each
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.004.jpeg)
-
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 004](https://github.com/seigun0629/AI/assets/55828996/f2627215-73bf-497a-b899-656715d751a5)
 interval 20 이상의 훈련부터는 훈련로스는 낮아지나 테스트 로스는 낮아지지않는다. 고로 interval 20미만까지  설정하는것이 과적화 문제를 막는것으로 보인다. 이때, spline function이 부드러워지는것이 과적화 문제를 일 으 키 는 것 은 , sin(x)+cos(y)가 fitting을 하 기 엔 간 단 하 여 interval 20이 상 의 복잡한 spline function을 필요로 하지 않는것인가 하는 의문이 든다. 그러므로 함수를 더 복잡하게하여 실험해본다. 
 
 이 밑 으 론 sin(x)+cos(y)+log(1+x^2+y^2)를 fitting 해 본 다 . 
@@ -56,7 +55,7 @@ width = [2,10,1]
 
 ,  grid=3 : 20 step, grid = [5,10,15,20,25] : 50 step each
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.005.jpeg)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 005](https://github.com/seigun0629/AI/assets/55828996/8e9ccd5b-7d85-47c8-bb2f-092683e8307e)
 
 예상대로 fitting 하려는 함수가 어려워질수록 grid interval이 늘어나는것은 과적화 문제를 일으키지않고 성능을 개선시킨다. 
 
@@ -72,15 +71,16 @@ width = [2,10,1]
 
 width = [2,5,1 ] grid 3 : 20step 이 다 .
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.006.png)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 006](https://github.com/seigun0629/AI/assets/55828996/2ae3cc8f-8bb5-473e-b3a7-55b382b08296)
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.007.png)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 007](https://github.com/seigun0629/AI/assets/55828996/a36a694d-6204-4d6b-b314-424479f516ca)
 
 두번의 복원시도에도 서로 다른 함수를 복원했다. width = [2,10,1] grid 3 : 20step 시 도 시 에 
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.008.png)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 008](https://github.com/seigun0629/AI/assets/55828996/9e8a4283-6665-4a89-8eb0-cde31f81f4d8)
 
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.009.png)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 009](https://github.com/seigun0629/AI/assets/55828996/69e74c35-88b5-46a0-9832-8eaf472fa911)
+
 
 위의 결과가 나왔다.
 
