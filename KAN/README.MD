@@ -1,4 +1,4 @@
-![](Aspose.Words.b408ff9b-3997-4a0e-9a4e-9c692457548e.001.jpeg)
+![Aspose Words b408ff9b-3997-4a0e-9a4e-9c692457548e 001](https://github.com/seigun0629/AI/assets/55828996/234a28be-734e-4d42-b605-b0919812134b)
 
 ( 위 표 에 서 KAN은 아 래 에 서 위 로 진 행 된 다 , width는 [2,3,3,1]로 생 각 된 다 )
 
