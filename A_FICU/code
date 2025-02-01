@@ -1,9 +1,11 @@
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
 # -----------------------------------------------------------------------------
+Adaptive Frequency‐Integrated Causal Upsampling
 # 1. Implicit Continuous Representation Module
 # This module approximates the continuous mapping f(x, y) for any high-res coordinate.
 # It takes as input a low-res feature map and coordinate embeddings, and outputs a pixel value.
